@@ -53,6 +53,10 @@ function  PageContent () {
       <ul>
         {products?.map((product) => (
           <li>
+            <img
+            src = {product.thumbnail}
+            alt = {product.title} >
+            </img>
             <h3>{product.title}</h3>
             <p>{product.description}</p>
             <p>{product.price}</p>
@@ -64,7 +68,12 @@ function  PageContent () {
 
       {/* pagination buttons */}
       <button>
+        Previous
+      </button>
 
+      <span>Page {page}</span>
+      <button>
+        Next
       </button>
     </div>
   )
